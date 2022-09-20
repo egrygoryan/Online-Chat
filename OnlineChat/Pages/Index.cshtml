@@ -1,0 +1,55 @@
+﻿@page
+@model OnlineChat.Pages.IndexModel
+@{
+	<div class="container">
+		<div class="row" id="userInfo">
+			<div class="row">
+				<div>
+					<label>type: first, second or third</label>
+				</div>
+				<div class="row">
+					<div class="col-4">
+						<input type="text" class="form-control" id="userName" autocomplete="off" />
+					</div>
+				</div>
+				<div class="row">&nbsp;</div>
+				<div class="row">
+					<div class="col-6">
+						<input type="button" id="joinButton" value="Join" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="~/js/provideName.js"></script>
+		<div class="app-area" id="appArea">
+			<div class="left-area">
+				<div class="header">
+					<h5>Chat Rooms</h5>
+				</div>
+				<ul class="rooms-list" id="roomsList">
+				</ul>
+			</div>
+			<div class="middle-area">
+				<div id="selectRoom">Please select room to join!</div>
+				<div class="message-area" id="messageArea">
+				</div>
+
+				<div class="enter-message-content" id="enterMessageContent">
+					<div><input type="text" id="messageInput" autocomplete="off" placeholder="Enter message " /></div>
+					<div><input type="button" id="sendButton" value="Send Message" /></div>
+				</div>
+			</div>
+			<div class="right-area">
+				<div>Joined as: <span id="joinedUser"></span></div>
+				<div id="divRoom">Room: <span id="currentRoom"></span></div>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="~/lib/jquery/dist/jquery.min.js"></script>
+	<script src="~/lib/jquery/dist/jquery.js"></script>
+	<script src="~/js/signalr/dist/browser/signalr.js"></script>
+	<script type="module" src="~/js/provideName.js"></script>
+	<script type="module" src="~/js/chat.js"></script>
+}
